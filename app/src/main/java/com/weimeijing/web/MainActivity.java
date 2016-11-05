@@ -32,6 +32,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.qq.e.ads.banner.ADSize;
 import com.qq.e.ads.banner.AbstractBannerADListener;
@@ -293,8 +294,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.popup_exit:
                 finish();
-                onDestroy();
                 System.exit(0);
+                android.os.Process.killProcess(android.os.Process.myPid());
                 break;
         }
     }
@@ -311,6 +312,20 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
 
+    //连续按2次退出程序
+    private long exitTime;
+
+    @Override
+    public void onBackPressed() {
+        if(System.currentTimeMillis() - exitTime > 2000) {
+            Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+            System.exit(0);
+            android.os.Process.killProcess(android.os.Process.myPid());
+        }
+    }
 
 
     private void initAd(){
