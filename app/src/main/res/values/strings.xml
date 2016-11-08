@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">极速浏览器</string>
+    <string name="app_name">天天浏览器</string>
     <string name="tabBarItem">TabBar</string>
     <string name="hello_world">Hello world!</string>
     <string name="input">输入网址</string>
