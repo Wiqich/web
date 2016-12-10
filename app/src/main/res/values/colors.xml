@@ -12,4 +12,7 @@
     <color name="b_bg">#fff9f9f9</color>
     <color name="edittext_color_highlight">#ffd3eac3</color>
     <color name="color">#ffffffff</color>
+    <color name="red">#ffff0000</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="gray">#ff808080</color>
 </resources>
