@@ -4,7 +4,9 @@ import android.animation.AnimatorInflater;
 import android.animation.LayoutTransition;
 import android.app.Activity;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
@@ -293,10 +295,26 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 index_background.setVisibility(View.GONE);
                 break;
             case R.id.popup_exit:
-                finish();
-                System.exit(0);
-                android.os.Process.killProcess(android.os.Process.myPid());
+                new AlertDialog.Builder(this).setTitle("确认退出吗？")
+                        .setIcon(android.R.drawable.ic_dialog_info)
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // 点击“确认”后的操作
+                                MainActivity.this.finish();
+                                System.exit(0);
+                                android.os.Process.killProcess(android.os.Process.myPid());
+                            }
+                        })
+                        .setNegativeButton("返回", new DialogInterface.OnClickListener() {
+
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                // 点击“返回”后的操作,这里不设置没有任何操作
+                            }
+                        }).show();
                 break;
+
         }
     }
 
