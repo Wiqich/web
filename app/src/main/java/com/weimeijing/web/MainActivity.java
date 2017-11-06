@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 
@@ -63,6 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     View index_background;
 
     RelativeLayout popup_exit;
+    RelativeLayout popup_setting;
 
 
 
@@ -102,6 +104,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         index_background = (View)findViewById(R.id.index_background);
         bottom_dialog = (LinearLayout)findViewById(R.id.bottom_dialog);
         popup_exit = (RelativeLayout)findViewById(R.id.popup_exit);
+        popup_setting = (RelativeLayout)findViewById(R.id.popup_setting);
 
 
 
@@ -114,6 +117,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         index_title_refresh.setOnClickListener(this);
         index_background.setOnClickListener(this);
         popup_exit.setOnClickListener(this);
+        popup_setting.setOnClickListener(this);
 
 
 
@@ -225,8 +229,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
 
-
-
         index_webView.setWebChromeClient(homeWebChromeClient);
         index_webView.setWebViewClient(homeWebViewClient);
         index_webView.loadUrl(home_url);
@@ -314,10 +316,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                             }
                         }).show();
                 break;
-
+            case R.id.popup_setting:
+                Intent intent=new Intent(MainActivity.this, SettingActivity.class);
+                startActivity(intent);
+                break;
         }
     }
-
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
@@ -370,7 +374,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         banner.loadAD();
         l.addView(banner);
     }
-
 
     private void initInterstitialAD(){
         final InterstitialAD iad = new InterstitialAD(this, "1103198930", "3000903056155648");

@@ -26,6 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity"  android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".SettingActivity"  android:windowSoftInputMode="adjustPan|stateHidden"/>
     </application>
 
 </manifest>
