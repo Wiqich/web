@@ -11,6 +11,6 @@
 * 有任何建议或者使用中遇到问题都可以给我发邮件或QQ;<br/>
 
 
-### 友情捐赠
+### 友情捐赠(支付宝)
 <img src="https://github.com/chenjie200280/web/blob/master/alipay.png" width="200" hegiht="200" align=center />
 
