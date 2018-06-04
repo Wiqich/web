@@ -12,5 +12,5 @@
 
 
 ### 友情捐赠(支付宝)
-<img src="https://github.com/chenjie200280/web/blob/master/alipay.png" onclick="javascript:void(0)“ width="200" hegiht="200" align=center />
+<img src="https://github.com/chenjie200280/web/blob/master/alipay.png"  width="200" hegiht="200" align=center />
 
