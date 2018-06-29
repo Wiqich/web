@@ -14,3 +14,5 @@
 ### 友情捐赠(支付宝)
 <img src="https://github.com/chenjie200280/web/blob/master/alipay.png"  width="200" hegiht="200" align=center />
 
+2018年2月10日 感觉 网友 streelrose 打赏 200元
+2018年6月28日 感谢 网友 三月 打赏 100元
